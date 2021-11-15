@@ -39,9 +39,9 @@ class _MyHomePageState extends State<MyHomePage> {
             _choixBtn = "FloatingActionButton";
           }
           break;
-        case 'raised':
+        case 'elevated':
           {
-            _choixBtn = 'RaisedButton';
+            _choixBtn = 'ElevatedButton';
           }
           break;
         case 'flat':
@@ -77,11 +77,11 @@ class _MyHomePageState extends State<MyHomePage> {
     _quelBouton('fab');
   }
 
-  void _raisedButtonOnPressed() {
-    _quelBouton('raised');
+  void _elevatedButtonOnPressed() {
+    _quelBouton('elevated');
   }
 
-  void _flatButtonOnPressed() {
+  void _textButtonOnPressed() {
     _quelBouton('flat');
   }
 
@@ -93,7 +93,7 @@ class _MyHomePageState extends State<MyHomePage> {
     _quelBouton('iconCircle');
   }
 
-  void _outlineButtonOnPressed() {
+  void _outlinedButtonOnPressed() {
     _quelBouton('outline');
   }
 
@@ -117,9 +117,9 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             const Padding(padding: EdgeInsets.all(30)),
             ElevatedButton(
-              onPressed: _raisedButtonOnPressed,
+              onPressed: _elevatedButtonOnPressed,
               child: const Text(
-                'RaisedButton',
+                'ElevatedButton',
                 style: TextStyle(color: Colors.white),
               ),
               style: ButtonStyle(
@@ -130,7 +130,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             const Padding(padding: EdgeInsets.all(5)),
             TextButton(
-              onPressed: _flatButtonOnPressed,
+              onPressed: _textButtonOnPressed,
               child: const Text(
                 'TextButton',
                 style: TextStyle(
@@ -167,7 +167,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             const Padding(padding: EdgeInsets.all(5)),
             OutlinedButton(
-              onPressed: _outlineButtonOnPressed,
+              onPressed: _outlinedButtonOnPressed,
               child: const Text(
                 'OutlinedButton',
                 style: TextStyle(color: Colors.deepPurple),
