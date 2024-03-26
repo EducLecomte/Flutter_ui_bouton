@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primaryColor: Colors.blue,
       ),
       home: const MyHomePage(title: 'Flutter UI Bouton'),
     );
@@ -102,6 +102,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
+        backgroundColor: Theme.of(context).primaryColor,
       ),
       body: Center(
         child: Column(
@@ -111,7 +112,7 @@ class _MyHomePageState extends State<MyHomePage> {
               'Le bouton appuyé est : ',
             ),
             Text(
-              '$_choixBtn',
+              _choixBtn,
               style: const TextStyle(
                   color: Colors.red, fontSize: 30, fontWeight: FontWeight.bold),
             ),
@@ -142,7 +143,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     MaterialStateProperty.resolveWith((states) => Colors.green),
                 shape: MaterialStateProperty.resolveWith(
                   (states) => RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(30.0)),
+                      borderRadius: BorderRadius.circular(12.0)),
                 ),
               ),
             ),
